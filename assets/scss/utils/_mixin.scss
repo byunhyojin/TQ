@@ -1,0 +1,20 @@
+
+@mixin position-center{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+$pc:1200px;
+$tablet:980px;
+@mixin pc(){
+    @media (max-width:$pc) {
+        @content;
+    }
+}
+@mixin tablet(){
+    @media (max-width:$tablet) {
+        @content;
+    }
+}

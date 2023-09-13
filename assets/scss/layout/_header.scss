@@ -1,0 +1,208 @@
+.header{
+    position:fixed;top:0;left:0;
+    width: 100%;z-index: 2;
+    background-color:$point-color4;
+    @include pc{background-color:$point-color4;}
+    @include tablet{background-color:$point-color4;}
+    .bg{position: fixed; top: 0;left: 0; width: 100%; height: 100%;background-color: rgba(0, 0, 0, 0.5); z-index: 2;
+    display: none;
+     &.on{display: block;}}
+    .hd-inner{ 
+        height: 100px; display: flex; 
+        padding:0 48px 0 48px; 
+        transition:0.4s;
+        &.on{
+            height: 80px;}
+        .logo{
+            height: 100%; display: flex;
+            align-items: center; 
+            justify-content: center;
+            a{ display: flex; width: 113px;height: 48px;}}
+        .taqamark{ color:$point-color3;width: 113px; height: 48px; margin-left: -50px;}
+        .tmark{ display: block;width: auto;height: 100%;}
+        .nav-list {
+            margin-left: 40px;
+            display: flex;  
+            width: 571px;
+            @include pc{display: none;}
+            .nav-item{
+                color:$point-color3; height: 100%; 
+                font-weight: 600; font-size: 16px; 
+                flex:1; position: relative;}
+                .about-nav{
+                    display: flex; justify-content: center; 
+                    align-items: center; height: 100%; 
+                    position: relative;
+                    &::before{
+                        content:''; position: absolute;
+                        width: 100%; height: 3px; 
+                        background: #00585A; top:0; left:0; 
+                        transition:transform 0.3s; transform: scaleX(0);
+                        transform-origin: right;
+                    }
+                    &:hover::before{transform: scaleX(1); transform-origin: left;}
+                }
+                .about-sub{
+                    background-color:$point-color4;display: none; 
+                    position: absolute; margin-top: 10px;
+                    li{ margin-top: 20px ;}
+                    &.sustain{  width:400px; height: 200px; padding:20px}
+                    &.media{width:400px; height: 150px; padding:20px }
+                    &.what{  width:400px; height: 200px; padding:20px}
+                    &.about{  width:400px; height: 250px; padding:20px}
+                    &.on{display: block;}
+                }
+              
+             
+        }
+        .util-area{
+            color:$point-color3; display: flex;
+            margin-left: auto; font-size: 16px;
+            width: 268px; }
+        .hd-Careers{
+            position: relative;height: 100%;  
+            display: flex; justify-content: center;
+            align-items: center; 
+            @include pc{display: none;}
+            &::before{
+                height:3px; position: absolute;
+                top: 0;left: 0;content:''; 
+                background:$point-color3;
+                width: 100%; transition:transform 0.3s; 
+                transform: scaleX(0);transform-origin: right;}
+            &:hover::before{ transform: scaleX(1); transform-origin: left;}
+        }
+        .hd-Contact{
+            height: 100%;  display: flex;
+            justify-content: center; align-items: center;
+            margin-left: 30px; position: relative;
+            @include pc{display: none;}
+        &::before{
+            position: absolute; 
+            top: 0;left: 0;content:'';
+            background:$point-color3 ; width: 100%; 
+            transition:transform 0.3s; transform: scaleX(0);
+            transform-origin: right;height: 3px;}
+        &:hover::before{ transform: scaleX(1); transform-origin: left;}
+        }
+        .search-box{
+            margin-left: auto;height: 100%; 
+            display: flex;justify-content: center; 
+            align-items: center;
+            .search-icon{ 
+                width: 40px; height: 40px; 
+                background-color: #e5eeee; display: flex;
+                align-items: center;justify-content: center;
+                border-radius: 100%; 
+                transition: all .25s ease-out;
+                &:hover{ background-color: $point-color2;}
+                svg{height: 20px;width: 20px; fill: $point-color3; 
+                }
+            }
+            .menu{
+                position: relative;
+                margin-left: 10px;
+                width: 40px; height: 40px; 
+                background-color: #e5eeee; 
+                border-radius: 100%;
+                transition: all .25s ease-out;
+                display: none;
+                &:hover{ background-color: $point-color2;}
+                svg{@include position-center;height: 20px;width: 20px; fill: $point-color3; }
+                @include pc{
+                    display: block;
+                }
+            }
+        }
+    }
+    .search{
+        display: none;width: 100%; 
+        height: 200px;
+        &.on{display: block;}
+        .searchbx{  
+            width:100%; height:100%;
+            position: relative; background-color:$point-color3;}
+        .logo-x{
+                position: absolute; 
+                top:20px; left:70px;width: 30px; 
+                height: 30px; border-radius: 100%; 
+                background-color:$point-color17; align-items: center; 
+                display: flex; justify-content: center; 
+                transition: all .40s ease-out;
+                svg{width: 20px; height: 20px; fill:white;}
+                &:hover svg{fill: $point-color3;}
+                &:hover{background:$point-color14;}
+            }
+        .logo-box{
+                height: 35px; width: 35px; 
+                background-color: $point-color17; border-radius: 100%;
+                position: absolute; top:63px; right:407px; 
+                display: flex; align-items: center; 
+                justify-content: center; 
+                transition: all .40s ease-out;
+                &:hover{ background:point-color14;
+                    svg{ fill: $point-color3;} } 
+                svg{width: 20px; height: 20px; fill: $point-color4;}
+            } 
+        form{ position: absolute;top:50px; left: 50%;transform: translateX(-50%);fieldset{border: 0;
+                        .search-box{ 
+                        width:700px;height: 60px;
+                        padding:0 16px 0 48px;
+                        background:$point-color3;  
+                        border-radius: 0; border:none;
+                        outline: none; border-bottom:2px solid $point-color17;}
+                        }
+                }
+        }
+    .menu-box{
+        display: none;
+        position:fixed;
+        width: 400px; height: 100%; z-index: 99; background-color:$point-color3; top: 0;right:0;
+        &.on{
+            display: block;
+        }
+        .menu-x{  width: 30px; position: absolute; top: 20px; right: 20px;
+            height: 30px; border-radius: 100%; 
+            background-color: $point-color17; align-items: center; 
+            display: flex; justify-content: center; 
+            transition: all .40s ease-out;
+            svg{width: 20px; height: 20px; fill:$point-color4;}
+            &:hover svg{fill: $point-color3;}
+            &:hover{background:$point-color14;}}
+        .menu-list{
+            position: absolute;
+            left:10px;
+            top: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+           
+            .menu-item{
+                height: 40px;
+                font-size:20px;
+                 font-weight: 700;
+                color:$point-color4; width: 300px;
+            border-bottom: 1px solid $point-color17;
+            transition: all 0.3s ease-out;
+        &:hover{color:$point-color17}}
+        }
+        .contact-list{position: absolute;
+            left:20px;
+            bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        .contact-item{
+             height: 20px;
+            font-size:15px;
+             font-weight: 700;
+            color:$point-color4; width: 300px;
+       
+        transition: all 0.3s ease-out;
+    &:hover{color:$point-color17}
+
+        }}
+    }
+    }
+
+

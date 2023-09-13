@@ -1,0 +1,448 @@
+.loading{
+    position: fixed;top:0; left:0; width: 100%; 
+    height: 100%; z-index: 99;background: $point-color3;
+    .t-logo{
+        position: absolute; top: 50%; 
+        left:50%; transform: translate(-50%, -50%);
+        width: 100px;height: 100px;
+        svg{width: 100%; height: 100%}
+    }
+}
+
+
+    
+.sc-main{
+    .video-box{
+        width: 100%; height: 100vh;
+        position: relative;
+        .video{width: 100%;height: 100%; object-fit: cover;}
+        .inner{
+           padding-top: 50px;
+            z-index: 1;
+            
+            position: absolute; bottom:0;
+            left:50%; transform: translateX(-50%);
+            width: 70%;
+            height: 764px; display: flex;
+            @include pc{   padding-top: 60px;}
+            @include tablet{   padding-top: 50px;}
+            }
+            }
+            .text-box{
+                .headline{
+                    
+                    font-size: 130px; color:$point-color4; margin-top: 50px; font-weight: 500; 
+                    @include pc{font-size: 95px; height: 50%; padding-top: 100px;}
+                    @include tablet{font-size: 120px;height: 50%; padding-top: 100px;}
+                    .wrap{display: block; overflow: hidden;}
+                }
+            }
+            .sub-text{margin-left:auto; margin-top: auto;color:$point-color4; width: 458px; height: 272px; display: flex;flex-direction: column;
+            @include tablet{ display: none;
+               
+
+            }}
+            .displane{
+                line-height: 1.5;letter-spacing: -0.01em;height: 96px; font-size: 16px; font-weight: 400;padding-left:40px;border-left:1px solid $point-color1;}
+            .discover{
+                border-left: 1px solid $point-color4; 
+                flex:1;padding:50px 0 0 40px; 
+                display: flex; position: relative;
+                p{
+                    display: flex; justify-content: center; 
+                    height: 64px; align-items: center; 
+                    font-size: 14px;font-weight: 600;
+                }
+                .play{
+                    position: relative;width: 64px;
+                    height: 64px; border-radius: 100%; 
+                    background-color:  $point-color1;
+                    display: flex;justify-content: center;
+                    align-items: center; text-align: center; 
+                    margin-right: 20px;transition: all .25s ease-out; 
+                    &:hover{background:$point-color2;}
+                    svg{width: 20px;height: 20px; fill: $point-color4;}
+                }
+            }
+    }
+/*offer 파트*/
+.sc-offer{
+
+    background-color: $point-color3;
+    padding:160px 123px 800px 123px;
+    height: 100vh;
+    @include pc{padding:96px 54px 48px 54px}
+    @include tablet{padding:96px 40px 48px 40px;}
+ 
+    }
+   
+    .subject{
+        align-items: center;font-size: 16px
+        ;font-weight: 500;line-height: 1.2;
+        font-weight: 600; color:$point-color4; 
+        display: flex;margin-bottom: 24px; 
+        height: 17px;
+        @include pc{font-size: 14px;}
+        img{margin-right: 10px; width: 10px;height: 10px;}
+    }
+    .summary{
+        min-width: 980px;
+       
+        font-size: 2rem;margin-top: 50px; 
+       
+        color:$point-color4;line-height: 1.4; 
+        letter-spacing: -0.0001em;
+        @include pc{font-size: 25px;}
+        @include tablet{font-size: 22px;}
+    }
+
+.do{
+    font-size: 30px; color:$point-color4; 
+    font-size: 14px;font-weight: 600; 
+    display: flex; margin-top: 50px; 
+    align-items: center;
+    p{
+        font-size: 30px; color: $point-color4; 
+        font-size: 14px;font-weight: 600; 
+        @include pc{ font-size: 12px;}
+       
+    }
+    .arrow{
+        width: 30px;height: 30px; 
+        border: 1px solid $point-color6;
+        margin-left: 20px; border-radius:100%; 
+        display: flex; align-items: center;
+        justify-content: center;transition: all .25s ease-out;
+        @include pc{ width: 26px;height: 26px;}
+        @include tablet{ width: 20px;height: 20px;}
+        &:hover{ background: $point-color5;} 
+        svg{width: 15px;height: 15px;  fill:$point-color7;
+        @include pc{ width: 13px; height: 13px}}
+        @include tablet{ width: 10px; height: 10px}
+    }
+}
+.ionicon {stroke:$point-color4;}
+
+
+
+.sc-ventures{
+   
+    padding:100px 124px 600px 124px; 
+    height: 300px; background-color:$point-color12; 
+    @include pc{padding: 100px 0 200px 40px;}
+    @include tablet{padding: 100px 30px 200px 20px;}
+    .inner{position: relative;}
+    .nav-section{ 
+        position: absolute; top:-350px;
+        display: flex; width: 100%; 
+        border:1.5px solid $point-color8;
+        @include pc{width: 100%;}
+        @include tablet{width: 100%;}
+        .on{ color:$point-color4; background: $point-color2;}
+    }
+    a{
+        font-size: 17px; font-weight: 700; 
+        color:#80abac;flex: 1;
+        height: 72px; display: flex; 
+        align-items: center;justify-content: center; 
+        @include pc{ font-size: 14px;height: 63px;}
+        &:nth-child(1){ border-right: 1.5px solid $point-color16 }
+        &:nth-child(2){  border-right: 1.5px solid $point-color16}
+    }
+    .swiper-section{position: absolute; top: -210px; width: 100%; }
+    .swiperlist{
+        width: 100%;
+        display: none;
+        &.on{display: block;}
+    }
+    .swiperbox{display: flex; width: 100%;}
+    .swiper{width: 100%;height: 580px;
+            @include pc{width: 100%;height: 429px;}
+            @include tablet{width: 100%;;height: 429px;}
+            }
+    .swiper-wrapper{width: 100%;}
+    .swiper-slide{height: 100%; position: relative;
+            &:nth-child(1){
+                .txt-box{
+                    position: absolute; z-index: 1; top:40px;
+                    p{color:$point-color4; padding-top:450px; font-weight: 700;}
+                }
+            }
+            .green-box{
+                width: 100%; height:580px; 
+                background-color:$point-color9;
+                @include pc{ width: 100%; height: 100%;}
+                @include tablet{ width: 100%; height: 100%;}
+                }
+            .txt-box{
+                position: absolute; z-index: 1; 
+                bottom:60px; left:30px;
+                h3{color:$point-color4; font-size:30px; 
+                font-weight: 700;}
+                }
+            img{width: 100%;height:580px;
+            @include pc{ width: 100%; height: 100%;}
+            @include tablet{ width:100%; height: 100%;}
+        }
+        }
+        .btn-box{
+            .button{
+                &:nth-child(1){
+                    width: 80px;height: 80px;
+                    background-color: $point-color5; 
+                    display: flex; align-items: center; 
+                    justify-content: center;
+                    @include pc{ width: 50px;height: 50px;}
+                    @include tablet{ width: 40px;height: 40px;}
+                    svg{width: 20px;height: 20px;fill:$point-color11;
+                    @include pc{width: 15px; height: 15px;}
+                    @include tablet{width: 13px; height: 13px;}
+                }
+                }
+                &:nth-child(2){
+                    width: 80px;height: 80px;
+                    background-color:$point-color10; 
+                    display: flex; align-items: center; 
+                    justify-content: center;
+                    @include pc{ width: 50px;height: 50px;}
+                    @include tablet{ width: 40px;height: 40px;}
+                    svg{width: 20px;height: 20px; fill: $point-color11;
+                        @include pc{width: 15px; height: 15px;}
+                        @include tablet{width: 13px; height: 13px;}
+                    }
+                }
+            }
+        }
+}
+
+
+
+.sc-SUSTAINABILITY{
+  
+  padding: 100px 0 100px 0;
+    height: 605px; position: relative;
+    background-color: $point-color12;position: relative;
+    @include tablet{
+        height: 1178px;
+        padding-top:90px;
+    }
+    .headline-box{
+            display: flex;  width: 40%;  
+            position: absolute; top: 100px; right:100px;
+            @include pc{ right:90px;}
+            @include tablet{ position: absolute;top: 0; left:30px}
+            img{margin-right: 10px;width: 16px;height: 15px;}
+            p{ color: $point-color3; font-size: 16px;font-weight: 700; 
+            @include pc{ font-size: 14px;}
+            @include tablet{ display: none;}
+           
+        }
+                }
+        .sustain-swiper{
+            position: absolute; left:0; width:50%; height: 764px;
+            @include pc{ width:50%;height: 680px;}
+            @include tablet{ width: 90%;height: 733px; left:30px}
+           
+        }
+        
+        .sustain-list{ width: 100%;height: 100%;}
+        .sustain-items{
+                position: relative; width: 100%; height: 100%;
+                img{width:100%; height: 100%; }
+            }
+        .hide-bg{
+                    position: absolute; left:0; 
+                    bottom:0; background: $point-color12;  
+                    z-index: 1; width: 100%; height: 100%;}
+        .sustaintxt-swiper{ 
+            width: 40%; height: 300px;position: absolute; right:100px;   top:200px;    
+        @include pc{ right:90px;}
+        @include tablet{ width: 90%; position: absolute; top:870px;}
+    }
+        .sustaintxt-list{
+                width: 100%; height: 100%;
+              
+                .text-box{
+                    width: 100%; height: 100%;}
+                    strong{font-size: 48px; color:$point-color13;
+                    @include pc{ font-size: 36px;}
+                    @include tablet{ font-size: 48px;}}
+                    p{line-height: 1.75; color: black ; font-size: 16px; margin-top: 20px;
+                    @include pc{ font-size: 13px;}
+                    @include tablet{ font-size: 16px;}
+                }
+                    .learn-box{
+                        p{font-size: 14px; color: $point-color13; font-weight: 700; transition: all .25s ease-out;}
+                        &:hover{
+                            p{color:$point-color5;}
+                        }
+                    }
+            }
+        .btn{
+            display: flex;height: 80px; 
+            background-color:$point-color13; 
+            width:70%; 
+            z-index: 1; position: absolute;
+            bottom: 0; right:0px;
+        }
+        .btn-next{
+            width: 80px;height:100%; 
+            background-color:$point-color5;
+            display: flex;justify-content: center; 
+            align-items: center;
+            svg{width: 20px;height: 20px;fill:$point-color11;}
+        }
+        .btn-prev{
+            width: 80px; height: 100%;
+            background-color: $point-color10; 
+            display: flex; justify-content: center;
+            align-items: center;margin-right: 40px;
+            svg{width: 20px;height: 20px;fill: $point-color11;}
+        }
+        .btn-text{
+            display: flex; align-items: center;
+            p{
+                font-size: 17px; font-weight: 700;color:$point-color4;
+            } 
+        }
+}
+.sc-people{
+   height: 100vh; 
+    background-color: $point-color3;  
+    padding:200px 100px 77px 123px;
+    @include pc{padding:200px 50px 35px 70px}
+    @include tablet{padding:50px 20px 0 20px; height: 608px;}
+    .inner{  position: relative; width: 100%;
+        display: flex;
+        
+        
+        .txt-box{width:50%;margin:0 10px;padding-top: 110px;}
+        .subject{   
+                align-items: center;font-size: 15px;
+                font-weight: 500;line-height: 1.2;
+                font-weight: 600; color:$point-color4; 
+                display: flex;margin-bottom: 24px; 
+                height: 17px;
+                @include pc{
+                    font-size: 12px;
+                }
+                img{ margin-right: 10px; width: 10px;height: 10px}
+            }
+        .summary{ 
+                font-size: 2rem;margin-top: 50px; 
+                color: white;line-height: 1.4; 
+                letter-spacing: -0.0001em; 
+                @include pc{
+                    font-size: 26px;
+                }
+                @include tablet { font-size: 25px;}
+            }
+        .do{
+                font-size: 30px; color:$point-color4; 
+                font-weight: 600; 
+                display: flex; margin-top: 50px; align-items: center;
+                @include pc{
+                    font-size: 14px;
+                }
+            }
+        .img-box{ 
+            position: absolute;
+           left:0;
+            margin-top: 20px;
+            flex:1;height: 666px; 
+            object-fit: contain; 
+            overflow:hidden; position: relative;
+            @include pc{width: 386px;
+                height: 453px;}
+
+            img{width:100%;height:100%; transform: scale(1.0);  transition: transform .9s ease-in;
+            }
+            &:hover{ img{transform: scale(1.5);}
+           
+        }
+        }
+        .hide-bg{
+            bottom:0;width: 100%;background:$point-color3;
+            height: 100%;position: absolute;
+            left:0;z-index: 2;
+            
+        
+    }
+} 
+}
+.team{margin-top: 50px; display: flex; 
+    .join{  color:$point-color4; font-size: 14px;font-weight: 600;  display: flex;align-items: center;}
+    .arrow{ width: 30px;height: 30px; border: 1px solid $point-color6; margin-left: 20px; border-radius:100%; }
+ }
+.sc-experts{
+    padding:160px 124px 160px 124px; 
+    background-color:$point-color12;
+    .txt-box{position: relative;}
+    .subject{
+        display: flex; color:$point-color3; font-weight: 700;
+        strong{font-size: 14px; margin-left: 10px;}
+    }
+    .headline{
+        display: flex; margin-top: 50px;
+        .title{font-size: 48px; color:$point-color3; margin-bottom: 50px;}
+        .view{
+            display: flex; justify-content: center;
+            align-items: center; margin-left:auto;
+            @include tablet{display: none;}
+            p{font-size:14px;color:$point-color3; font-weight: 700;  transition: all .25s ease-out;}
+            &:hover{.ionicon{stroke:#fff;}
+                    .arrow{background:$point-color5; border: none;}
+                    p{color:$point-color5}
+                    } 
+            .ionicon{ stroke: $point-color3; transition: all .20s ease-out;}
+            
+        }
+        .arrow{ 
+            border:1px solid $point-color3; 
+            display: flex; align-items: center; 
+            justify-content: center; 
+            width: 30px;height: 30px; 
+            border-radius: 100%; margin-left: 15px; 
+            transition: all .10s ease-out;
+            svg{width:20px;height: 20px; fill:$point-color7; }
+        }
+    }
+    .my-swiper{height: 566px; 
+        .my-list{ width: 1389px;height:100%;}
+        .my-items{width: 441px;height:100%; 
+                img{width:100%;height: 50%; } 
+            }
+        .txt-box{
+                padding:33px 44px 33px 44px ;
+                width: 100%;; height:50%; 
+                position: relative;background-color: $point-color4; 
+                h3{
+                    font-weight: 600; font-size: 12px; 
+                    color:$point-color3; position: absolute;
+                    margin-bottom: 30px;  top: 20px; left:10px
+                }
+                strong{
+                    font-weight: 700; font-size:30px;
+                    padding-right:10px; padding-left:10px;
+                    line-height: 1.4; color:$point-color3; 
+                    position: absolute; left: 10px; top:70px}
+                }
+            }
+    .button{ 
+        display: flex; width: 80px; 
+        height: 160px; flex-direction: column; 
+        position: absolute; top: 170px; 
+        right:-80px;z-index: 1;
+      
+        }
+    .button-next{ background-color: $point-color5; }
+    .button-prev{background-color:$point-color10;}
+    .btn{
+        width: 80px;height: 80px; 
+        display: flex; justify-content: center;
+        align-items: center; 
+        svg{width:20px;height: 20px;fill:$point-color11 }
+    }
+}
+
+

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="./assets/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./assets/js/taqa.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"></script>
+    <script src="./assets/js/split.min.js"></script>
+</head>
+<div class="wrapper">
+
+    <body class="hidden">
+        <div class="loading">
+            <div class="t-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="44" viewBox="0 0 52 44" class="tmark">
+                    <g transform="translate(-18210 -10930)">
+                        <rect width="52" height="44" transform="translate(18210 10930)" fill="none"></rect>
+                        <g transform="translate(0.113)">
+                            <path d="M0,0H34.631L25.969,8.654H10.533A4.536,4.536,0,0,1,7.325,7.325Z"
+                                transform="translate(18209.887 10930)" fill="#ff6720"></path>
+                            <path
+                                d="M72.879,66.482V32.1l-7.833,7.84a2.805,2.805,0,0,0-.821,1.982V55.95a4.536,4.536,0,0,0,1.329,3.207Z"
+                                transform="translate(18162.977 10906.555)" fill="currentColor"></path>
+                            <path
+                                d="M64.267,41.677a1.058,1.058,0,0,1,1.072-.924h33.54l-7.325-7.325A4.536,4.536,0,0,0,88.346,32.1H72.91l-7.833,7.84a2.8,2.8,0,0,0-.809,1.737"
+                                transform="translate(18162.947 10906.555)" fill="#00bfb2"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <header class="header">
+            <div class="bg"></div>
+            <div class="hd-inner">
+                <h1 class="logo">
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="44" viewBox="0 0 52 44"
+                            class="tmark">
+                            <g transform="translate(-18210 -10930)">
+                                <rect width="52" height="44" transform="translate(18210 10930)" fill="none"></rect>
+                                <g transform="translate(0.113)">
+                                    <path d="M0,0H34.631L25.969,8.654H10.533A4.536,4.536,0,0,1,7.325,7.325Z"
+                                        transform="translate(18209.887 10930)" fill="#ff6720"></path>
+                                    <path
+                                        d="M72.879,66.482V32.1l-7.833,7.84a2.805,2.805,0,0,0-.821,1.982V55.95a4.536,4.536,0,0,0,1.329,3.207Z"
+                                        transform="translate(18162.977 10906.555)" fill="currentColor"></path>
+                                    <path
+                                        d="M64.267,41.677a1.058,1.058,0,0,1,1.072-.924h33.54l-7.325-7.325A4.536,4.536,0,0,0,88.346,32.1H72.91l-7.833,7.84a2.8,2.8,0,0,0-.809,1.737"
+                                        transform="translate(18162.947 10906.555)" fill="#00bfb2"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="113" height="48" viewBox="0 0 113 48"
+                            class="taqamark">
+                            <g transform="translate(-18210 -10930)">
+                                <rect width="113" height="48" transform="translate(18210 10930)" fill="none"></rect>
+                                <g transform="translate(0.113)">
+                                    <path d="M133.458,101.332v2.99h6.064v17.69h3.856v-17.69h6.037v-2.99Z"
+                                        transform="translate(18112.41 10855.987)" fill="currentColor"></path>
+                                    <path
+                                        d="M198.516,101.668h.056l3.521,12.352h-7.126Zm-3.27-.336-6.428,20.681h3.857l1.425-5h8.831l1.425,5h4.108l-6.4-20.681Z"
+                                        transform="translate(18071.975 10855.987)" fill="currentColor"></path>
+                                    <path
+                                        d="M285.668,118.265v2.99H275.356c-6.036,0-9.614-3.913-9.614-10.48s3.577-10.48,9.614-10.48c5.981,0,9.558,3.828,9.558,9.446,0,5.338-2.85,8.5-7.6,8.5v.056Zm-10.312.112c3.493,0,5.561-2.823,5.561-7.546,0-4.667-2.068-7.462-5.561-7.462-3.549,0-5.617,2.795-5.617,7.462,0,4.723,2.068,7.546,5.617,7.546"
+                                        transform="translate(18015.789 10856.744)" fill="currentColor"></path>
+                                    <path
+                                        d="M357.506,117.01h-8.831l-1.425,5h-3.857l6.428-20.681h6.819l6.4,20.681h-4.108Zm-.838-2.99-3.521-12.352h-.056l-3.549,12.352Z"
+                                        transform="translate(17959.074 10855.987)" fill="currentColor"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </h1>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="" class="about-nav">
+                            <p>About TAQA</p>
+                        </a>
+                        <ul class="about-sub about">
+                            <li><a href="">Overview</a></li>
+                            <li><a href="">CEO Message</a></li>
+                            <li><a href="">Board Members</a></li>
+                            <li><a href="">Executive Management</a></li>
+                            <li><a href="">Strategy</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="about-nav">
+                            <p>What we do</p>
+                        </a>
+                        <ul class="about-sub what">
+                            <li><a href="">Overview</a></li>
+                            <li><a href="">TAQA Well Solutions</a></li>
+                            <li><a href="">TAQA Venture</a></li>
+                            <li><a href="">Products & Technologies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="about-nav">
+                            <p>Sustainability</p>
+                        </a>
+                        <ul class="about-sub sustain">
+                            <li><a href="">Overview</a></li>
+                            <li><a href="">QHSSE</a></li>
+                            <li><a href="">ESG</a></li>
+                            <li><a href="">Energy Transition</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="about-nav">
+                            <p>Media Center</p>
+                        </a>
+                        <ul class="about-sub media">
+                            <li><a href="">Overview</a></li>
+                            <li><a href="">News & Knowledge</a></li>
+                            <li><a href="">Video</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="util-area">
+                    <div class="hd-Careers">
+                        <p>Careers</p>
+
+                    </div>
+                    <p class="hd-Contact">Contact</p>
+                    <div class="search-box">
+                        <a href="" class="search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+                                <title>Search</title>
+                                <path
+                                    d="M464 428L339.92 303.9a160.48 160.48 0 0030.72-94.58C370.64 120.37 298.27 48 209.32 48S48 120.37 48 209.32s72.37 161.32 161.32 161.32a160.48 160.48 0 0094.58-30.72L428 464zM209.32 319.69a110.38 110.38 0 11110.37-110.37 110.5 110.5 0 01-110.37 110.37z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="" class="menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+                                <title>Menu</title>
+                                <path d="M64 384h384v-42.67H64zm0-106.67h384v-42.66H64zM64 128v42.67h384V128z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <div class="searchbx">
+                    <a class="logo-x">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+                            <title>Close</title>
+                            <path
+                                d="M400 145.49L366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49z">
+                            </path>
+                        </svg>
+                    </a>
+                    <div class="logo-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+                            <title>Search</title>
+                            <path
+                                d="M464 428L339.92 303.9a160.48 160.48 0 0030.72-94.58C370.64 120.37 298.27 48 209.32 48S48 120.37 48 209.32s72.37 161.32 161.32 161.32a160.48 160.48 0 0094.58-30.72L428 464zM209.32 319.69a110.38 110.38 0 11110.37-110.37 110.5 110.5 0 01-110.37 110.37z">
+                            </path>
+                        </svg>
+                    </div>
+                    <form action="">
+                        <fieldset>
+                            <legend class="blind">검색</legend>
+                            <input type="text" class="search-box">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="menu-box">
+                <a href="" class="menu-x">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+                        <title>Close</title>
+                        <path
+                            d="M400 145.49L366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49z">
+                        </path>
+                    </svg>
+                </a>
+                <div class="menu-list">
+                    <a href="" class="menu-item">About TAQA</a>
+                    <a href="" class="menu-item">Whate we do</a>
+                    <a href="" class="menu-item">Sustainability</a>
+                    <a href="" class="menu-item">Media Center</a>
+                </div>
+                <div class="contact-list">
+                    <a href="" class="contact-item">Contact</a>
+                    <a href="" class="contact-item">Careers</a>
+                    <a href="" class="contact-item">Terms of Use</a>
+                </div>
+            </div>
+
+        </header>
+        <main class="container">
+            <section class="sc-main">
+                <div class="video-box">
+                    <video autoplay="" loop="" muted="" id="myVideo" class="video" preload="true" playsinline="">
+                        <source src="https://www.taqa.com.sa/wp-content/uploads/2022/09/TAQA.mp4" type="video/mp4">
+                    </video>
+                    <div class="inner">
+                        <div class="text-box">
+                            <h2 class="headline">
+                                <span class="wrap">The</span>
+                                <span class="wrap">Enabler</span>
+                                <span class="wrap"> of Energy</span>
+                            </h2>
+
+                        </div>
+                        <div class="sub-text">
+                            <p class="displane">TAQA drives innovation to create value for our <br>customers, provide
+                                economic growth to the
+                                <br>
+                                communities
+                                we operate in, and to enable <br> energy sustainably.
+                            </p>
+                            <div href="" class="discover">
+                                <a href="" class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                        viewBox="0 0 512 512">
+                                        <title>Play</title>
+                                        <path d="M96 448l320-192L96 64v384z"></path>
+                                    </svg>
+                                </a>
+                                <p>DISCOVER TAQA</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="sc-offer">
+                <div class="inner">
+                    <h2 class="blind">WHAT WE OFFER</h2>
+                    <div class="txt-box">
+                        <div class="subject">
+                            <img src="./assets/images/offerarrow-first.svg" alt="">
+                            <strong>WHAT WE OFFER</strong>
+                        </div>
+                        <p class="summary">
+                            At TAQA, we partner dwith our customers to address their most pressing challenges <br> while
+                            enabling
+                            their performance through technology and innovation on a path <br>marked by excellence in
+                            everything
+                            we do. With more than 5,500 employees across <br> 20 countries, TAQA's well services
+                            portfolio
+                            includes, Coiled Tubing & Stimulation, <br> Cementing, Wireline, Frac, Directional Drilling,
+                            Downhole Tools, Completions, Well <br> Testing, Slickline, Inspection, H2S Safety, and
+                            Logging &
+                            Perforating.
+                        </p>
+                        <a href="" class="do">
+                            <p>WHAT WE DO</p>
+                            <span class="arrow-btn-arrow">
+                                <ion-icon name="arrow-forward-sharp" role="img" class="md hydrated"
+                                    aria-label="arrow forward sharp">
+                                </ion-icon>
+                            </span>
+                            <div class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                    viewBox="0 0 512 512">
+                                    <title>Arrow Forward</title>
+                                    <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                        d="M268 112l144 144-144 144M392 256H100" class="ionicon-fill-none"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="sc-ventures">
+                <div class="inner">
+                    <div class="nav-section">
+                        <a href="#solution" class="nav-solution on">TAQA Well Solutions</a>
+                        <a href="#venture" class="nav-venture">TAQA Venture</a>
+                        <a href="#product" class="nav-product">Products & Technologies</a>
+                    </div>
+                    <div class="swiper-section">
+                        <div id="solution" class="swiperlist on">
+                            <div class="swiperbox">
+                                <div class="swiper solution-swiper">
+                                    <div class="swiper-wrapper solution-list">
+                                        <div class="swiper-slide solution-items">
+                                            <div class="green-box"></div>
+                                            <div class="txt-box">
+                                                <h3>TAQA Well Solutions</h3>
+                                                <p>Learn More</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide solution-items">
+                                            <img src="./assets/images/pd-ft.jpg" alt="">
+                                            <div class="txt-box">
+                                                <h3>Coiled Tubing Services</h3>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide solution-items">
+                                            <img src="./assets/images/pd-ff.jpg" alt="">
+                                            <div class="txt-box">
+                                                <h3>Completions(Tendeka)</h3>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide solution-items">
+                                            <img src="./assets/images/pd-st.png" alt="">
+                                            <div class="txt-box">
+                                                <h3>News & Knowledge</h3>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide solution-items">
+                                            <img src="./assets/images/pd-ft.jpg" alt="">
+                                            <div class="txt-box">
+                                                <h3>Drilling Services</h3>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide solution-items">
+                                            <img src="./assets/images/pd-sf.png" alt="">
+                                            <div class="txt-box">
+                                                <h3>TAQA Frac</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-box">
+                                    <div class="button solution-next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                            viewBox="0 0 512 512">
+                                            <title>Chevron Forward</title>
+                                            <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                                d="M184 112l144 144-144 144" class="ionicon-fill-none"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="button solution-prev">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                            viewBox="0 0 512 512">
+                                            <title>Chevron Back</title>
+                                            <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                                d="M328 112L184 256l144 144" class="ionicon-fill-none"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="venture" class="swiperlist">
+                            <div class="swiperbox">
+                                <div class="swiper venture-swiper">
+                                    <div class="swiper-wrapper venture-list">
+                                        <div class="swiper-slide venture-items">
+                                            <div class="green-box"></div>
+                                            <div class="txt-box">
+                                                <h3>TAQA Ventures</h3>
+                                                <p>Learn More</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide venture-items">
+                                            <img src="./assets/images/first-wire.jpg" alt="">
+                                            <div class="txt-box">
+                                                <h3>Coiled Tubing Services</h3>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide venture-items">
+                                            <img src="./assets/images/first-ta.jpg" alt="">
+                                            <div class="txt-box">
+                                                <h3>Completions(Tendeka)</h3>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide venture-items">
+                                            <img src="./assets/images/pf-fs.jpg" alt="">
+                                            <div class="txt-box">
+                                                <h3>News & Knowledge</h3>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide venture-items">
+                                            <img src="./assets/images/pd-tf.jpg" alt="">
+                                            <div class="txt-box">
+                                                <h3>Drilling Services</h3>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide venture-items">
+                                            <img src="./assets/images/pd-tt.jpg" alt="">
+                                            <div class="txt-box">
+                                                <h3>TAQA Frac</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="btn-box">
+                                    <div class="button venture-next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                            viewBox="0 0 512 512">
+                                            <title>Chevron Forward</title>
+                                            <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                                d="M184 112l144 144-144 144" class="ionicon-fill-none"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="button venture-prev">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                            viewBox="0 0 512 512">
+                                            <title>Chevron Back</title>
+                                            <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                                d="M328 112L184 256l144 144" class="ionicon-fill-none"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product" class="swiperlist">
+                            <div class="swiperbox">
+                                <div class="swiper product-swiper">
+                                    <div class="swiper-wrapper product-list">
+                                        <div class="swiper-slide product-items">
+                                            <div class="green-box"></div>
+                                            <div class="txt-box">
+                                                <h3>Products & Technologies</h3>
+                                                <p>Learn More</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide product-items">
+                                            <img src="./assets/images/pd-sf.png" alt="">
+                                            <div class="txt-box">
+                                                <h3>Coiled Tubing Services</h3>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide product-items">
+                                            <img src="./assets/images/pd-ss.png" alt="">
+                                            <div class="txt-box">
+                                                <h3>Completions(Tendeka)</h3>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide product-items">
+                                            <img src="./assets/images/pd-tf.jpg" alt="">
+                                            <div class="txt-box">
+                                                <h3>News & Knowledge</h3>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide product-items">
+                                            <img src="./assets/images/pd-ft.jpg" alt="">
+                                            <div class="txt-box">
+                                                <h3>Drilling Services</h3>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide product-items">
+                                            <img src="./assets/images/pd-sf.png" alt="">
+                                            <div class="txt-box">
+                                                <h3>TAQA Frac</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-box">
+                                    <div class="button product-next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                            viewBox="0 0 512 512">
+                                            <title>Chevron Forward</title>
+                                            <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                                d="M184 112l144 144-144 144" class="ionicon-fill-none"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="button product-prev">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                            viewBox="0 0 512 512">
+                                            <title>Chevron Back</title>
+                                            <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                                d="M328 112L184 256l144 144" class="ionicon-fill-none"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </section>
+
+            <section class="sc-SUSTAINABILITY">
+
+                <h2 class="blind">SUSTAINABILITY</h2>
+                <div class="headline-box">
+                    <img src="./assets/images/offerarrow-first.svg" alt="">
+                    <p> SUSTAINABILITY</p>
+                </div>
+                <div class="swiper sustain-swiper">
+                    <div class="swiper-wrapper sustain-list">
+                        <div class="swiper-slide sustain-items">
+                            <div class="hide-bg"></div>
+                            <img src="./assets/images/Energy Transition.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide sustain-items">
+                            <div class="hide-bg"></div>
+                            <img src="./assets/images/qhsse.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide sustain-items">
+                            <div class="hide-bg"></div>
+                            <img src="./assets/images/esg.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper sustaintxt-swiper">
+                    <div class="swiper-wrapper sustaintxt-list">
+                        <div class="swiper-slide sustaintxt-items">
+
+                            <div class="text-box">
+                                <strong>Energy Transition</strong>
+                                <p>
+                                    Our Energy Transition Strategy is fully aligned with the Kingdom of Saudi Arabia's
+                                    <br>
+                                    Green Initiative, which focuses on increasing reliance on clean energy, offsetting
+                                    <br>
+                                    emissions, and protecting the environment.
+
+                                </p>
+                                <a class="learn-box">
+                                    <p>LEARN MORE</p>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide sustaintxt-items">
+                            <div class="text-box">
+                                <strong>QHSSE</strong>
+                                <p>Safety and Reliability are core values for TAQA.</p>
+                                <a class="learn-box">
+                                    <p>LEARN MORE</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide sustaintxt-items">
+                            <div class="text-box">
+                                <strong>ESG</strong>
+                                <p>ESG is a framework that outlines the environmental and social <br>accountability
+                                    demonstrated by a company to illustrate the <br>extent of their responsible
+                                    practice
+                                    and governance.
+                                </p>
+                                <div class="learn-box">
+                                    <p>LEARN MORE</p>
+                                    <a href=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <div class="btn-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+                            <title>Chevron Back</title>
+                            <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                d="M328 112L184 256l144 144" class="ionicon-fill-none"></path>
+                        </svg>
+                    </div>
+                    <div class="btn-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+                            <title>Chevron Forward</title>
+                            <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                d="M184 112l144 144-144 144" class="ionicon-fill-none"></path>
+                        </svg>
+                    </div>
+                    <a class="btn-text">
+                        <p>OUR SUSTAINABILITY PROMISE</p>
+                    </a>
+                </div>
+
+            </section>
+
+            <section class="sc-people">
+                <div class="inner">
+                    <h2 class="blind">our people</h2>
+                    <div class="txt-box">
+                        <div class="subject">
+                            <img src="./assets/images/offerarrow-first.svg" alt="">
+                            <strong>OUR PEOPLE</strong>
+                        </div>
+                        <p class="summary">
+                            We promote a culture of shared values <br>and empowerment among our people, <br>championing
+                            personal
+                            development and <br>nurturing promising talent to benefit both <br> our own team and the
+                            communities
+                            we <br>
+                            serve.
+                        </p>
+                        <a href="" class="do">
+                            <p>WHAT WE DO</p>
+
+                            <span class="arrow-btn-arrow">
+                                <ion-icon name="arrow-forward-sharp" role="img" class="md hydrated"
+                                    aria-label="arrow forward sharp">
+                                </ion-icon>
+                            </span>
+                            <div class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                    viewBox="0 0 512 512">
+                                    <title>Arrow Forward</title>
+                                    <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                        d="M268 112l144 144-144 144M392 256H100" class="ionicon-fill-none"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="img-box">
+                        <div class="hide-bg"></div>
+                        <img src="./assets/images/people.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section class="sc-experts">
+                <div class="inner">
+                    <h2 class="blind">
+                        experts views from taqa
+                    </h2>
+                    <div class="txt-box">
+                        <div class="subject">
+                            <img src="./assets/images/offerarrow-first.svg" alt="">
+                            <strong>EXPERTS VIEWS FROM TAQA</strong>
+                        </div>
+                        <div class="headline">
+                            <p class="title"> News & Insights</p>
+                            <a class="view">
+                                <p>VIEW ALL</p>
+                                <span class="arrow-btn-arrow">
+                                    <ion-icon name="arrow-forward-sharp" role="img" class="md hydrated"
+                                        aria-label="arrow forward sharp">
+                                    </ion-icon>
+                                </span>
+                                <div class="arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                        viewBox="0 0 512 512">
+                                        <title>Arrow Forward</title>
+                                        <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                            d="M268 112l144 144-144 144M392 256H100" class="ionicon-fill-none"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper my-swiper">
+                            <div class="swiper-wrapper my-list">
+                                <div class="swiper-slide my-items">
+                                    <img src="./assets/images/news-group.jpg" alt="">
+                                    <div class="txt-box">
+                                        <h3>News & Knowledge</h3>
+                                        <strong>
+                                            شركة طاقة و “ريكيافيك جيوثيرمال ” توقعان<br> اتفاقية مشروع مشترك لتأسيس
+                                            “طاقة
+                                            جيوثيرمال إنيرجي”
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide my-items">
+                                    <img src="./assets/images/news-arab.jpg" alt="">
+                                    <div class="txt-box">
+                                        <h3>News & Knowledge</h3>
+                                        <strong>
+                                            شركة طاقة و “ريكيافيك جيوثيرمال ” توقعان<br> اتفاقية مشروع مشترك لتأسيس
+                                            “طاقة
+                                            جيوثيرمال إنيرجي”
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide my-items">
+                                    <img src="./assets/images/news-arab.jpg" alt="">
+                                    <div class="txt-box">
+                                        <h3>News & Knowledge</h3>
+                                        <strong>
+                                            شركة طاقة و “ريكيافيك جيوثيرمال ” توقعان<br> اتفاقية مشروع مشترك لتأسيس
+                                            “طاقة
+                                            جيوثيرمال إنيرجي”
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide my-items">
+                                    <img src="./assets/images/news-work.jpg" alt="">
+                                    <div class="txt-box">
+                                        <h3>News & Knowledge</h3>
+                                        <strong>
+                                            شركة طاقة و “ريكيافيك جيوثيرمال ” توقعان<br> اتفاقية مشروع مشترك لتأسيس
+                                            “طاقة
+                                            جيوثيرمال إنيرجي”
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide my-items">
+                                    <img src="./assets/images/news-classic.jpg" alt="">
+                                    <div class="txt-box">
+                                        <h3>News & Knowledge</h3>
+                                        <strong>
+                                            شركة طاقة و “ريكيافيك جيوثيرمال ” توقعان<br> اتفاقية مشروع مشترك لتأسيس
+                                            “طاقة
+                                            جيوثيرمال إنيرجي”
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <div class="btn button-next">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                    viewBox="0 0 512 512">
+                                    <title>Chevron Forward</title>
+                                    <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                        d="M184 112l144 144-144 144" class="ionicon-fill-none"></path>
+                                </svg>
+                            </div>
+                            <div class="btn button-prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                    viewBox="0 0 512 512">
+                                    <title>Chevron Back</title>
+                                    <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                        d="M328 112L184 256l144 144" class="ionicon-fill-none"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="ft-top">
+                <div class="inner">
+                    <div class="subject">
+                        <img src="./assets/images/offerarrow-first.svg" alt="">
+                        <p>CONTACT US FOR ENQURIES</p>
+                    </div>
+                    <a class="ft-talk">
+                        <strong>Lets's talk</strong>
+                        <span class="arrow-btn-arrow">
+                            <ion-icon name="arrow-forward-sharp" role="img" class="md hydrated"
+                                aria-label="arrow forward sharp">
+                            </ion-icon>
+                        </span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+                                <title>Arrow Forward</title>
+                                <path stroke-linecap="square" stroke-miterlimit="10" stroke-width="48"
+                                    d="M268 112l144 144-144 144M392 256H100" class="ionicon-fill-none"></path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="ft-middle">
+                <div class="inner">
+                    <div class="ft-contact">
+                        <a href="" class="logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="112.227" height="48"
+                                viewBox="0 0 112.227 48">
+                                <g transform="translate(-48 -24)">
+                                    <path d="M133.458,101.332v2.99h6.064v17.69h3.856v-17.69h6.037v-2.99Z"
+                                        transform="translate(-49.477 -50.013)" fill="currentColor"></path>
+                                    <path
+                                        d="M198.516,101.668h.056l3.521,12.352h-7.126Zm-3.27-.336-6.428,20.681h3.857l1.425-5h8.831l1.425,5h4.108l-6.4-20.681Z"
+                                        transform="translate(-89.912 -50.013)" fill="currentColor"></path>
+                                    <path
+                                        d="M285.668,118.265v2.99H275.356c-6.036,0-9.614-3.913-9.614-10.48s3.577-10.48,9.614-10.48c5.981,0,9.558,3.828,9.558,9.446,0,5.338-2.85,8.5-7.6,8.5v.056Zm-10.312.112c3.493,0,5.561-2.823,5.561-7.546,0-4.667-2.068-7.462-5.561-7.462-3.549,0-5.617,2.795-5.617,7.462,0,4.723,2.068,7.546,5.617,7.546"
+                                        transform="translate(-146.098 -49.256)" fill="currentColor"></path>
+                                    <path
+                                        d="M357.506,117.01h-8.831l-1.425,5h-3.857l6.428-20.681h6.819l6.4,20.681h-4.108Zm-.838-2.99-3.521-12.352h-.056l-3.549,12.352Z"
+                                        transform="translate(-202.813 -50.013)" fill="currentColor"></path>
+                                    <path d="M0,0H34.631L25.969,8.654H10.533A4.536,4.536,0,0,1,7.325,7.325Z"
+                                        transform="translate(48 24)" fill="#ff6720"></path>
+                                    <path
+                                        d="M72.879,66.482V32.1l-7.833,7.84a2.805,2.805,0,0,0-.821,1.982V55.95a4.536,4.536,0,0,0,1.329,3.207Z"
+                                        transform="translate(1.09 0.555)" fill="currentColor"></path>
+                                    <path
+                                        d="M64.267,41.677a1.058,1.058,0,0,1,1.072-.924h33.54l-7.325-7.325A4.536,4.536,0,0,0,88.346,32.1H72.91l-7.833,7.84a2.8,2.8,0,0,0-.809,1.737"
+                                        transform="translate(1.061 0.555)" fill="#00bfb2"></path>
+                                    <rect width="112.226" height="48" transform="translate(48 24)" fill="none"></rect>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="" class="context">
+                            <p>
+                                The Industrialization Energy Services <br> Company (TAQA), Dhahran 4088-34455,
+                                <br>Building:
+                                15-Eastern Province, The Kingdom of Saudi Arabia
+                            </p>
+                        </a>
+                        <a class="phone">
+                            <p>phone</p>
+                            <span>+966 13 328 8090</span>
+                        </a>
+                        <a class="phone">
+                            <p>Fax</p>
+                            <span>+966 13 868 4222</span>
+                        </a>
+                        <div class="sns-area">
+                            <a class="linkdin">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                    viewBox="0 0 512 512">
+                                    <title>Logo Linkedin</title>
+                                    <path
+                                        d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"
+                                    viewBox="0 0 512 512">
+                                    <title>Logo Twitter</title>
+                                    <path
+                                        d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about">
+                        <div class="ft-about">
+                            <h3>About TAQA</h3>
+                            <div class="txt-box">
+                                <a href="">CEO Message</a>
+                                <a href="">Board Members</a>
+                                <a href="">Executive Management</a>
+                                <a href="">Strategy</a>
+                            </div>
+                        </div>
+                        <div class="ft-about">
+                            <h3>What We Do</h3>
+                            <div class="txt-box">
+                                <a href="">TAQA Well Solutions</a>
+                                <a href="">TAQA Ventures</a>
+                                <a href="">Products & Technologies</a>
+                            </div>
+                        </div>
+                        <div class="ft-about">
+                            <h3>Discover More</h3>
+                            <div class="txt-box">
+                                <a href="">Sustainability</a>
+                                <a href="">Media Center</a>
+                                <a href="">Careers</a>
+                                <a href="">Contact</a>
+                                <a href="">Privacy Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ft-bottom">
+
+                <div class="inner">
+                    <address>Copyright © 2023 TAQA KSA. All rights reserved</address>
+                    <a href="">Site by Studio Form</a>
+
+                </div>
+            </div>
+        </footer>
+    </body>
+</div>
+
+
+
+
+</html>

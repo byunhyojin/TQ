@@ -1,0 +1,121 @@
+.footer{
+    .ft-top{
+        background: $point-color3; height: 342px;
+        padding:0 123px 0 123px; 
+        border-bottom: 1px solid $point-color14;
+        @include pc{padding: 0 53px 0 53px;}
+        .inner{padding:96px 0 96px 0;}
+        .subject{
+            display: flex; height: 17px; 
+            margin-bottom: 15px;font-weight: 700;
+            img{width: 10px;height: 1.2em;}
+            p{margin-left: 10px; font-size:14px; color:$point-color4 ;
+            }
+        }
+        .ft-talk{
+            display: flex; align-items: center;
+            strong{font-size: 98px; color:$point-color4;
+                @include pc{font-size: 80px;}}
+            &:hover{
+                svg{transform: translateX(10px);} }
+            svg{
+                width:64px; 
+                fill: $point-color11;
+                height: 64px; ;transition: transform 0.3s;
+                @include pc{width: 34px;height: 34px;}}
+        }
+    }
+    .ft-middle{
+        background-color: $point-color3;
+            .inner{display: flex; padding:0 124px 0 124px; 
+                @include pc{padding: 0 53px 0 53px;}
+                @include tablet{flex-direction: column; padding:0; }
+            }
+            .ft-contact{
+                width: 347px; padding-right:20px;padding-top: 96px;
+                @include pc{width: 263px;}
+                @include tablet{width: 100%; padding:20px 30px; border-bottom: 1px solid $point-color14; ; }
+                .context{
+                    p{
+                        color:#ffffffab; margin-top: 30px; font-size: 17px;line-height: 1.5; transition: color 0.3s;margin-bottom: 30px;
+                        @include pc{font-size: 14px;}
+                        @include tablet{font-size:23px;}
+                    &:hover{color:$point-color4;}
+                }
+                        }
+                .phone {
+                    display: flex; align-items: center; margin-bottom: 10px; 
+                    &:hover{p{color:$point-color15;}}
+                    p{color:$point-color14;  transition: color 0.3s ;@include pc{font-size: 14px;}
+                    @include tablet{font-size: 20px;}
+                }
+                    span{color:$point-color4; margin-left: 10px;}}
+                .sns-area{
+                    color:$point-color4; margin-left: 10px; display: flex; margin-top: 30px;
+                    @include tablet{ margin-top: 20px;}
+                    .linkdin{   
+                        transition: all .40s ease-out;display: flex; align-items: center; justify-content: center; width: 40px;height: 40px; border-radius: 100%; border:1px solid $point-color14;
+                        @include pc{width: 30px;height: 30px;}
+                        @include tablet{width: 40px;height: 40px;}
+                        &:hover{  background:$point-color4;}
+                        svg{width: 15px; height: 15px; fill:$point-color4;
+                            @include pc{width: 10px;height: 10px;}
+                            @include tablet{width: 20px;height: 20px;}
+                        }
+                        :hover{svg{fill:$point-color3;}}
+                }
+                    .twitter{
+                        display: flex; align-items: center; justify-content: center; width: 40px;height: 40px; border-radius: 100%; border:1px solid $point-color14; margin-left:14px; transition: all .40s ease-out;
+                        @include pc{width: 30px;height: 30px;}
+                        @include tablet{width: 40px;height: 40px;}
+                        &:hover{background:$point-color4;svg{fill:$point-color3;}}
+                        svg{
+                            width: 15px;height: 15px;fill:$point-color4;
+                            @include pc{width: 10px;height: 10px;}
+                            @include tablet{width: 20px;height: 20px;}
+                        }
+                }
+                }
+                svg{color:$point-color4; }
+                }
+            .about{
+                padding:96px 0 96px 70px; flex:1;height: 510px; display: flex; border-left:1px solid $point-color14; ;
+                @include pc{padding: 64px 0 64px 47px; flex-wrap: nowrap;}
+                @include tablet{border-left: none; width: 100%;}
+                .ft-about{ 
+                    flex:1;height: 100%;
+                    margin-right: 10px;
+                    h3{
+                        color:$point-color14; font-size: 16px; margin-bottom: 40px;
+                        @include pc{font-size: 15px;}
+                        @include tablet{font-size: 20px;}
+                    }
+                    .txt-box{
+                        font-size: 16px; color: $point-color4; display: flex; flex-direction: column; transition: color 0.3s;
+                        @include pc{font-size: 14px;}
+                        @include tablet{font-size: 18px;}
+                        a{margin-bottom: 20px;
+                        &:hover{color:$point-color15;}
+                        } 
+                    }
+            }
+        }
+    }
+    .ft-bottom{
+        padding:32px 82px 24px ;background-color: $point-color3; border-top: 1px solid $point-color14;
+        @include tablet{padding:20px 10px;}
+        .inner{
+            color:$point-color14; display: flex; font-size: 13px;
+            @include pc{font-size: 10px;}
+            @include tablet{font-size: 13px;}
+        }
+            address{
+                transition: color 0.3s;
+                
+                &:hover{color:$point-color4;}
+            }
+            a{margin-left: auto; transition: color 0.3s;
+            &:hover{color:$point-color4}
+        }
+    }
+}
