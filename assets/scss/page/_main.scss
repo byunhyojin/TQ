@@ -307,13 +307,14 @@
         }
 }
 .sc-people{
-   height: 100vh; 
+   
+    height: 1000px;
     background-color: $point-color3;  
-    padding:200px 100px 77px 123px;
-    @include pc{padding:200px 50px 35px 70px}
+    padding:200px 100px 100px 123px;
+    @include pc{padding:200px 50px 35px 70px; height: 800px;}
     @include tablet{padding:50px 20px 0 20px; height: 608px;}
-    .inner{  position: relative; width: 100%;
-        display: flex;
+    .inner{  position: relative;
+        display: flex;  
         
         
         .txt-box{width:50%;margin-right:10%;padding-top: 110px;
