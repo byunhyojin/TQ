@@ -19,6 +19,41 @@
 <div class="wrapper">
 
     <body class="hidden">
+        <style>
+            #skipNav {
+                position: absolute;
+                z-index: 10;
+            }
+
+            #skipNav a {
+                position: absolute;
+                width: 150px;
+                top: 0;
+                left: 0;
+                line-height: 50px;
+                background: #000;
+                color: #fff;
+                text-align: center;
+                transform: translateY(-100%);
+            }
+
+            #skipNav a:focus,
+            #skipNav a:active {
+                transform: translateY(0);
+            }
+        </style>
+
+
+        <div id="skipNav">
+            <a href="#offer">WHAT WE OFFER</a>
+            <a href="#ventures">Main slide</a>
+            <a href="#Sustain">SUSTAINABILITY</a>
+            <a href="#people">OUR PEOPLE</a>
+            <a href="#experts">EXPERTS VIEWS</a>
+            <a href="#footer">footer</a>
+        </div>
+
+
         <div class="loading">
             <div class="t-logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="52" height="44" viewBox="0 0 52 44" class="tmark">
@@ -38,6 +73,7 @@
                 </svg>
             </div>
         </div>
+
         <header class="header">
             <div class="bg"></div>
             <div class="hd-inner">
@@ -238,7 +274,7 @@
                 </div>
             </section>
 
-            <section class="sc-offer">
+            <section class="sc-offer" id="offer">
                 <div class="inner">
                     <h2 class="blind">WHAT WE OFFER</h2>
                     <div class="txt-box">
@@ -279,7 +315,7 @@
 
             </section>
 
-            <section class="sc-ventures">
+            <section class="sc-ventures" id="ventures">
 
                 <div class="inner">
                     <div class="nav-section">
@@ -491,7 +527,7 @@
 
             </section>
 
-            <section class="sc-SUSTAINABILITY">
+            <section class="sc-SUSTAINABILITY" id="Sustain">
 
                 <h2 class="blind">SUSTAINABILITY</h2>
                 <div class="headline-box">
@@ -583,7 +619,7 @@
 
             </section>
 
-            <section class="sc-people">
+            <section class="sc-people" id="people">
                 <div class="inner">
                     <h2 class="blind">our people</h2>
                     <div class="txt-box">
@@ -624,7 +660,7 @@
                 </div>
             </section>
 
-            <section class="sc-experts">
+            <section class="sc-experts" id="experts">
                 <div class="inner">
                     <h2 class="blind">
                         experts views from taqa
@@ -735,7 +771,7 @@
             </section>
 
         </main>
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="ft-top">
                 <div class="inner">
                     <div class="subject">
