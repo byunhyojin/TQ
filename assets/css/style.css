@@ -976,6 +976,30 @@ body {
   color: #fff;
 }
 
+#skipNav {
+  position: absolute;
+  z-index: 10;
+}
+
+#skipNav a {
+  position: absolute;
+  width: 150px;
+  top: 0;
+  left: 0;
+  line-height: 50px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+#skipNav a:focus,
+#skipNav a:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .loading {
   position: fixed;
   top: 0;
